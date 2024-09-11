@@ -15,25 +15,26 @@ console.log(age());
 
 function year() {
   const year = 2020;
-  console.log();
-  //   year += 4;
+  console.log(year);
+    // year += 4;
+    // console.log(year)
 }
-console.log(year());
+year();
 
 // --------------------------2 Question:-----------------------------------
 // Write a JavaScript function that takes an array as an argument. Inside the function:
 // 	console.log an element along with its index.
-function numberArray() {
-  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function numberArray(array) {
   // 	Add a new value to the array and console.log
   console.log(array);
-  array[10] = 22;
+  array[10] = 11;
+  console.log(array);
   console.log(array.length);
-  return array;
 }
 
 // 	console.log the new length of the array.
-console.log(numberArray());
+numberArray(array);
 
 // --------------------------3 Question:-----------------------------------
 // Write a JavaScript program that creates an object. Inside the object:
@@ -51,4 +52,4 @@ console.log("city = ", person.city);
 person["role"] = "Programer";
 
 // 	console.log the updated object.
-console.log("role = ", person.role);
+console.log(person);
