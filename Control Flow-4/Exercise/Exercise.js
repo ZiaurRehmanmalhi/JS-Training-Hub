@@ -18,7 +18,7 @@ function isLandscape(width, height) {
 
 // Exercise 3 fizzBuzz
 function fizzBuzz(input) {
-    if (typeof input!== 'number') return 'NOT A NUMBER'
+    if (typeof input !== 'number') return 'NOT A NUMBER'
     else if (input % 3 == 0 && input % 5 == 0) return 'fizzBuzz'
     else if (input % 3 == 0) return 'fizz'
     else if (input % 5 == 0) return 'Buzz'
@@ -69,7 +69,7 @@ function countTruthy(array){
             count++;
     return count;    
 }
-// console.log(countTruthy(array));
+// console.log('limit',countTruthy(array));
 
 
 // Exercise 7 string properties
@@ -81,7 +81,7 @@ const movie = {
     director: 'Director'
 };
 
-showProperties(movie);
+// showProperties(movie);
 
 function showProperties(obj){
     for (let key in obj){
@@ -90,3 +90,61 @@ function showProperties(obj){
         }
     }
 }
+
+// Exercise 8 sum of multiple of 3 and 5
+
+function sum(limit){
+    let sum = 0;
+    for (let i = 0; i <= limit; i++)
+        if (i % 3 == 0 || i % 5 == 0)
+            sum += i;
+    return sum;
+}
+
+// console.log(sum(10))
+
+
+// Exercise 9 calculate grades
+marks = [80, 78, 45, 69, 90];
+
+function calculateGrades(marks){
+    let sum = 0;
+    for (let mark of marks)
+        sum += mark;
+    let average = sum / marks.length;
+    if (average >= 80 ) return 'A';
+    else if (average >= 70 ) return 'B';
+    else if (average >= 60 ) return 'C';
+    else if (average < 60 ) return 'F';
+
+}
+// console.log(calculateGrades(marks));
+
+// Exercise 10 show stars
+
+function showStars(rows) {
+    for (let row=1; row <= rows; row++){
+        let pattern = '';
+        for (let i=0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+// showStars(5);
+
+// Exercise 11 prime numbers
+
+function showPrime(limit){
+    for(let i = 2; i <= limit; i++){
+        let isPrime = true;
+        for(let j = 2; j < i; j++){
+            if (i % j === 0) {
+                isPrime=false
+                break
+            }
+        }
+        // debugger;
+        if (isPrime) console.log(i)
+    }
+}   
+// showPrime(23);
